@@ -59,7 +59,7 @@ function setPageInfo() {
       console.log(list_skills);
       var list_des = document.getElementById("list_des");
       for (var index_skill = 0; index_skill < list_skills.length; index_skill++) {
-        let cols = document.createElement("div");
+        var cols = document.createElement("div");
         cols.setAttribute("class","col-12 col-md-3 fs-4");
         cols.append(index_skill+1 + '.' + list_skills[index_skill]);
         if(list_skills[index_skill] != "其他"){
