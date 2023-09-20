@@ -69,7 +69,12 @@ function setPageInfo() {
           let TA = document.createElement("textarea");
           TA.setAttribute("class","form-control");
           TA.setAttribute("rows",2);
-          TA.setAttribute("style","display : block;");
+          if(obj_des.description.others == ""){
+            TA.setAttribute("style","display : none;");  
+          }
+          else{
+            TA.setAttribute("style","display : block;");  
+          }
           TA.setAttribute("readonly","");
           TA.append(obj_des.description.others);
           cols.append(TA);
