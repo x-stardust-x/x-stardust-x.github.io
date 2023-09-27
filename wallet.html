@@ -22,27 +22,24 @@
   <script src="/static/js/getGroup.js"></script>
   <script src="/static/js/init.js"></script>
   <script>
-    function Change_m() {
+    function Change(oc) {
       const camera = document.getElementById('camera');
       const mission = document.getElementById('mission');
       const btn1 = document.getElementById('btn1');
       const btn2 = document.getElementById('btn2');
       const text = "d-flex justify-content-end";
-      camera.setAttribute("class", "d-none")
-      mission.setAttribute("class", "")
-      btn1.setAttribute("class",text + ' d-none');
-      btn2.setAttribute("class",text);
-    }
-    function Change_c() {
-      const camera = document.getElementById('camera');
-      const mission = document.getElementById('mission');
-      const btn1 = document.getElementById('btn1');
-      const btn2 = document.getElementById('btn2');
-      const text = "d-flex justify-content-end";
-      camera.setAttribute("class", "")
-      mission.setAttribute("class", "d-none")
-      btn1.setAttribute("class",text);
-      btn2.setAttribute("class",text + " d-none");
+      if(oc){
+        camera.setAttribute("class", "d-none")
+        mission.setAttribute("class", "")
+        btn1.setAttribute("class",text + ' d-none');
+        btn2.setAttribute("class",text);
+      }
+      else{
+        camera.setAttribute("class", "")
+        mission.setAttribute("class", "d-none")
+        btn1.setAttribute("class",text);
+        btn2.setAttribute("class",text + " d-none");
+      }
     }
   </script>
 </head>
@@ -81,14 +78,14 @@
     <!-- border border-secondary border-width-lg -->
     <div class="row d-flex justify-content-end border border-3 border-top-0 border-black">
       <div id="btn1" class="d-flex justify-content-end">
-        <button onclick="Change_m()"
+        <button onclick="Change(1)"
           class="m-2 border border-3 border-black rounded-5 link-underline link-underline-opacity-0 btn btn-warning">
           <p class="fs-5 text-center my-auto text-dark">切換手動</p>
         </button>
       </div>
       <div id="btn2" class="d-flex justify-content-end d-none">
-        <button onclick="Change_c()"
-          class="m-2 me-3 border border-3 border-black rounded-5 link-underline link-underline-opacity-0 btn btn-warning">
+        <button onclick="Change(0)"
+          class="m-2 border border-3 border-black rounded-5 link-underline link-underline-opacity-0 btn btn-warning">
           <p class="fs-5 text-center my-auto text-dark">切換攝影機</p>
         </button>
       </div>
@@ -110,7 +107,7 @@
       </div>
     </div>
     <div id="mission" class="d-none">
-      <div class="row d-flex justify-content-center border border-3 border-top-0 border-black">
+      <div class="row d-flex justify-content-center border border-3 border-black">
         <!-- 3 9 or 2 10 -->
         <a href="#"
           class="col-3 col-md-2 m-2 border border-3 border-black rounded-5 link-underline link-underline-opacity-0 btn btn-primary">
