@@ -288,6 +288,6 @@ function setPageInfo() {
     var list_verified_tasks = repos_verified_tasks.uuid;
     addVerifiedTable(list_verified_tasks);
   } else if (page == "trade.html"){
-    document.getElementById("money").innerHTML = getLocalStorage("money");
+    document.getElementById("balance").innerHTML = getLocalStorage("balance");
   }
 }
