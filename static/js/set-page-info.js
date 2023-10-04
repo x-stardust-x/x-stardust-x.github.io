@@ -54,6 +54,7 @@ function setPageInfo() {
     }
 
     var obj_des = get_des();
+    console.log(obj_des);
     if (obj_des.result == true) {
       var list_skills = obj_des.description.hhhhhhh;
       console.log(list_skills);
@@ -288,6 +289,7 @@ function setPageInfo() {
     var list_verified_tasks = repos_verified_tasks.uuid;
     addVerifiedTable(list_verified_tasks);
   } else if (page == "trade.html"){
+    setLocalStorage("balance", get_balance());
     document.getElementById("balance").innerHTML = getLocalStorage("balance");
   }
 }
