@@ -49,7 +49,7 @@ doneBtn.addEventListener("click", function () {
 
     $.ajax(settings).done(function (res) {
       console.log(res);
-      //window.location.replace("/trade.html");
+      window.location.replace("/trade.html");
     });
    }
    else {

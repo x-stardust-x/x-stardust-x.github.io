@@ -123,3 +123,56 @@ function get_des(){
   return dataJason;
 }
 
+function get_task_objects() {
+  // 現在人數、總人數、積分、任務專長
+  const form = new FormData();
+  form.append("email", getLocalStorage('email'));
+  var dataJason = {};
+  let settings = {
+      url: `http://127.0.0.1:8000/get_data`,
+      method: "POST",
+      timeout: 0,
+      processData: false,
+      mimeType: "multipart/form-data",
+      contentType: false,
+      data: form,
+      async: false
+  };
+
+  $.ajax(settings).done(function (taskObs) {
+      const task_Obs = JSON.parse(taskObs);
+      dataJason = task_Obs;
+  });
+
+  return dataJason;
+}
+
+function get_point(){
+  const form = new FormData();
+  // const userEmail = getLocalStorage('email');
+  // const userEmail = "200@gmail.com";
+  // const userGroup = "202";
+  //form.append("group", userGroup);
+  form.append("email", getLocalStorage('email'));
+  var dataJason = {};
+
+  
+    
+    let settings = {
+      url: `http://127.0.0.1:8000/get_trust_point`,
+      method: "POST",
+      timeout: 0,
+      processData: false,
+      mimeType: "multipart/form-data",
+      contentType: false,
+      data: form,
+      async: false
+    };
+
+    $.ajax(settings).done(function (points) {
+      const person_points = JSON.parse(points);
+      dataJason = person_points;
+    });
+
+  return dataJason;
+}

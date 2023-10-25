@@ -22,23 +22,30 @@
   <script src="/static/js/getGroup.js"></script>
   <script src="/static/js/init.js"></script>
   <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+  <script>
     function Change(oc) {
       const camera = document.getElementById('camera');
-      const mission = document.getElementById('mission');
+      const mission = document.getElementById('mission_list');
       const btn1 = document.getElementById('btn1');
       const btn2 = document.getElementById('btn2');
       const text = "d-flex justify-content-end";
-      if(oc){
-        camera.setAttribute("class", "d-none")
-        mission.setAttribute("class", "")
-        btn1.setAttribute("class",text + ' d-none');
-        btn2.setAttribute("class",text);
+      const header_text = document.getElementById('header_text');
+      if (oc) {
+        camera.setAttribute("class", "row d-flex justify-content-center py-3 border border-3 border-top-0 border-black" + " d-none")
+        mission.setAttribute("class", "row row-cols-1 row-cols-md-4 py-3 border border-3 border-top-0 border-black")
+        btn1.setAttribute("class", text + ' d-none');
+        btn2.setAttribute("class", text);
+        header_text.innerHTML = '只顯示適合你的任務 <i class="bi bi-question-circle-fill" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>';
       }
-      else{
-        camera.setAttribute("class", "")
-        mission.setAttribute("class", "d-none")
-        btn1.setAttribute("class",text);
-        btn2.setAttribute("class",text + " d-none");
+      else {
+        camera.setAttribute("class", "row d-flex justify-content-center py-3 border border-3 border-top-0 border-black")
+        mission.setAttribute("class", "row row-cols-1 row-cols-md-4 py-3 border border-3 border-top-0 border-black" + " d-none")
+        btn1.setAttribute("class", text);
+        btn2.setAttribute("class", text + " d-none");
+        header_text.innerText = "透過掃描來領取任務";
       }
     }
   </script>
@@ -90,30 +97,43 @@
         </button>
       </div>
     </div>
-    <div id="camera" class="">
-      <div class="row justify-content-center py-3 border border-3 border-black">
-        <div class="col-12 col-md-7">
-          <div class="text-center">
-            <script src="/static/html5-qrcode/dist/html5-qrcode.min.js"></script>
-            <script src="/static/js/qrcode.js"></script>
-            <div id="qr-reader" style="width: 300px"></div>
+    <div class="row border border-3 border-black border-bottom-0 border-top-0">
+      <h2 class="pt-2" id="header_text">透過掃描來領取任務
+      </h2>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">系統如何評斷適合的任務?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h4>專長:</h4><p>任務專長跟個人專長沒有一項一樣不顯示。</p>
+              <h4>積分:</h4><p>任務積分高於個人積分不顯示。</p>
+              <h4>人數:</h4><p>任務人數滿了不顯示。</p>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-5">
-          <div class="text-center">
-            <img src="/static/imgs/qrcode.png" alt="">
-          </div>
+      </div>
+      <!-- Modal -->
+    </div>
+    <div class="row d-flex justify-content-center py-3 border border-3 border-top-0 border-black" id="camera">
+      <div class="col-12 col-md-7">
+        <div class="text-center">
+          <script src="/static/html5-qrcode/dist/html5-qrcode.min.js"></script>
+          <script src="/static/js/qrcode.js"></script>
+          <div id="qr-reader" style="width: 300px"></div>
+        </div>
+      </div>
+      <div class="col-12 col-md-5">
+        <div class="text-center">
+          <img src="/static/imgs/qrcode.png" alt="">
         </div>
       </div>
     </div>
-    <div id="mission" class="d-none">
-      <div class="row d-flex justify-content-center border border-3 border-black">
-        <!-- 3 9 or 2 10 -->
-        <a href="#"
-          class="col-3 col-md-2 m-2 border border-3 border-black rounded-5 link-underline link-underline-opacity-0 btn btn-primary">
-          <p class="fs-3 text-center my-auto text-light">任務列表清單</p>
-        </a>
-      </div>
+
+    <div class="row row-cols-1 row-cols-md-4 py-3 border border-3 border-top-0 border-black d-none" id="mission_list">
     </div>
     <div class="row d-flex justify-content-center border border-3 border-top-0 border-black">
       <a href="choice.html"
@@ -124,4 +144,5 @@
   </div>
 </body>
 <script src="static/js/receive_tasks.js"></script>
+
 </html>
