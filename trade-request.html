@@ -79,58 +79,81 @@
           <label for="token" class="form-label fs-3 fw-bold">最低信用積分限制</label>
           <div class="input-group">
             <input type="number" value="1" name="Time" min="1" max="100" step="1" class="form-control" id="point">
-            <span class="input-group-text"></span>
+            <span class="input-group-text">分</span>
           </div>
         </div>
         <div class="col-12 mb-3">
           <label for="token" class="form-label fs-3 fw-bold">所需專長</label>
           <div class="row row-gap-3">
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="行政支援" id="gridCheck1">
-              <label for="gridCheck1" class="form-label">1. 行政支援</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="行政支援" type="checkbox" id="gridCheck1">
+              <label class="form-check-label ps-3" for="gridCheck1">
+                1. 行政支援
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="課業輔導" id="gridCheck2">
-              <label for="gridCheck2" class="form-label">2. 課業輔導</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="課業輔導" type="checkbox" id="gridCheck2">
+              <label class="form-check-label ps-3" for="gridCheck2">
+                2. 課業輔導
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="社區服務" id="gridCheck3">
-              <label for="gridCheck3" class="form-label">3. 社區服務</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="社區服務" type="checkbox" id="gridCheck3">
+              <label class="form-check-label ps-3" for="gridCheck3">
+                3. 社區服務
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="生活扶助" id="gridCheck4">
-              <label for="gridCheck4" class="form-label">4. 生活扶助</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="生活扶助" type="checkbox" id="gridCheck4">
+              <label class="form-check-label ps-3" for="gridCheck4">
+                4. 生活扶助
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="電腦科技" id="gridCheck5">
-              <label for="gridCheck5" class="form-label">5. 電腦科技</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="電腦科技" type="checkbox" id="gridCheck5">
+              <label class="form-check-label ps-3" for="gridCheck5">
+                5. 電腦科技
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="環保教育" id="gridCheck6">
-              <label for="gridCheck6" class="form-label">6. 環保教育</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="環保教育" type="checkbox" id="gridCheck6">
+              <label class="form-check-label ps-3" for="gridCheck6">
+                6. 環保教育
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="藝術文化" id="gridCheck7">
-              <label for="gridCheck7" class="form-label">7. 藝術文化</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="藝術文化" type="checkbox" id="gridCheck7">
+              <label class="form-check-label ps-3" for="gridCheck7">
+                7. 藝術文化
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="健康醫療" id="gridCheck8">
-              <label for="gridCheck8" class="form-label">8. 健康醫療</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="健康醫療" type="checkbox" id="gridCheck8">
+              <label class="form-check-label ps-3" for="gridCheck8">
+                8. 健康醫療
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="權益倡導" id="gridCheck9">
-              <label for="gridCheck9" class="form-label">9. 權益倡導</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="權益倡導" type="checkbox" id="gridCheck9">
+              <label class="form-check-label ps-3" for="gridCheck9">
+                9. 權益倡導
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" value="國際交流" id="gridCheck10">
-              <label for="gridCheck10" class="form-label">10. 國際交流</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" value="國際交流" type="checkbox" id="gridCheck10">
+              <label class="form-check-label ps-3" for="gridCheck10">
+                10. 國際交流
+              </label>
             </div>
-            <div class="col-12 col-md-3 fs-5">
-              <input class="form-check-input" type="checkbox" id="otherCheck" onclick="checkBoxFn()">
-              <label for="otherCheck" class="form-label">11. 其他</label>
+            <div class="col-12 col-md-3">
+              <input class="form-check-input checkbox-1x skillCheck" type="checkbox" id="otherCheck"
+                onclick="checkBoxFn()">
+              <label class="form-check-label ps-3" for="otherCheck">
+                11. 其他
+              </label>
             </div>
-            <div class="form-group col-12">
-              <textarea class="form-control" id="textArea" rows="6" style="display: none;"></textarea>
+            <div class="col-12">
+              <textarea class="form-control" id="textArea" rows="2" style="display: none;"></textarea>
             </div>
           </div>
         </div>
