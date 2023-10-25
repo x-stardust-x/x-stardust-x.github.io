@@ -5,7 +5,8 @@ function navbar() {
 
   var title_name = "";
   var navbar = document.getElementById("navbar");
-  const str_nav = `<div class="container-fluid">
+  if(navbar!=null){
+    const str_nav = `<div class="container-fluid">
                 <div class="col d-flex justify-content-start">
                   <a class="navbar-brand mb-0 h1" href="index.html">
                     <img class="mx-1" src="static/imgs/eID-logo.png" width="55" height="30">
@@ -50,4 +51,5 @@ function navbar() {
   }
   var str_inner = str_nav.replace("TITLE_NAME",title_name);
   navbar.innerHTML = str_inner;
+  }
 }

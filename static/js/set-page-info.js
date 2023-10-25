@@ -194,7 +194,7 @@ function setPageInfo() {
     }
 
   } else if (page == "wallet.html") {
-    set_task_list(123);
+    // set_task_list(123);
   } else if (page == "edit-info.html") {
     document.getElementById("email").innerHTML = getLocalStorage("email");
     document.getElementById("username").value = getLocalStorage("username");
