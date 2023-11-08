@@ -69,7 +69,8 @@ function setPageInfo() {
         else{
           if(obj_des.description.others != ""){
             list_des.append(cols);
-            cols.setAttribute("class","col-12 fs-4");
+            cols.setAttribute("class","col-12 col-md-3 fs-4");
+            
             let TA = document.createElement("textarea");
             TA.setAttribute("class","form-control");
             TA.setAttribute("rows",2);
@@ -81,8 +82,8 @@ function setPageInfo() {
             }
             TA.setAttribute("readonly","");
             TA.append(obj_des.description.others);
-            cols.append(TA);
             list_des.append(cols);
+            list_des.append(TA);
           }
         }
       }
@@ -193,7 +194,8 @@ function setPageInfo() {
     }
 
   } else if (page == "wallet.html") {
-    set_task_list(123);
+    var arr_tasks = list_plan_tasks("00000001", "1");
+    set_task_list(arr_tasks.tasks);
   } else if (page == "edit-info.html") {
     document.getElementById("email").innerHTML = getLocalStorage("email");
     document.getElementById("username").value = getLocalStorage("username");
