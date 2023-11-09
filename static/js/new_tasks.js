@@ -8,12 +8,34 @@ doneBtn.addEventListener("click", function () {
   var overview = document.getElementById("overview").value;// "overview123";
   var token = document.getElementById("token").value; // "test001";
   var cover = getLocalStorage("task_cover");//`${TASK_COVER}`;
+  var max_people = document.getElementById("people").value;
+  var point_limit = document.getElementById("point").value;
+  let checkArray = [];
+  var obj_sed = {};
+  var index_chk_box = 0;
+  while (true) {
+    if (document.getElementById("gridCheck" + (++index_chk_box).toString()) == null) {
+      break;
+    }
+    if (document.getElementById("gridCheck" + (index_chk_box).toString()).checked) {
+      checkArray.push(document.getElementById("gridCheck" + (index_chk_box).toString()).value);
+    }
+  }
+  obj_sed.hhhhhhh = checkArray;
+  if (document.getElementById("otherCheck") != null ) { //&& document.getElementById("otherCheck").checked
+    checkArray.push("其他"); 
+    obj_sed.others = document.getElementById("textArea").value;
+  }
+
   
   form.append("uuid", uuid);
   form.append("email", email);
   form.append("type", type);
   form.append("name", name);
   form.append("token", token);
+  form.append("max_people", max_people);
+  form.append("point_limit", point_limit);
+  form.append("description_limit", JSON.stringify(obj_sed));
   form.append("overview", overview);
   form.append("cover", cover);
 
@@ -29,6 +51,17 @@ doneBtn.addEventListener("click", function () {
 
   $.ajax(settings).done(function (res) {
     console.log(res);
-    //window.location.replace("/verifier-cms-list.html");
+    // window.location.replace("/verifier-cms-list.html");
   });
 });
+
+function checkBoxFn() {
+  let otherCheck = document.getElementById("otherCheck");
+  let textArea = document.getElementById("textArea");
+  if (otherCheck.checked === true) {
+    textArea.style.display = "block";
+  } else {
+    textArea.style.display = "none";
+    textArea.value = "";
+  }
+}

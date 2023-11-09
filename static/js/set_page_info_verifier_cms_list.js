@@ -12,7 +12,7 @@ function set_page_info_verifier_cms_list(list_tasks) {
 
   for (var index = 0; index < list_tasks.length; index++) {
     var obj_task = get_task_info(list_tasks[index]);
-    console.log(JSON.stringify(obj_task));
+    console.log(obj_task);
 
     var obj_task_block = document.createElement("div");
     obj_task_block.className = "col-sm-4";
