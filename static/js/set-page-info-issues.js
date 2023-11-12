@@ -15,10 +15,10 @@ function set_page_info_issues() {
   
   for (var index = 0; index < list_task_UUIDs.length; index++) {
     var obj_task = get_task_info(list_task_UUIDs[index]);
-    console.log(JSON.stringify(obj_task));
+    console.log(obj_task);
 
     var obj_task_block = document.createElement("div");
-    obj_task_block.className = "col-md-4"; //"col-10 mt-3";
+    obj_task_block.className = "col-md-4 mb-2"; //"col-10 mt-3";
 
     var str_inner = str_issue_block.replaceAll("TASK_NAME", obj_task.name);
     str_inner = str_inner.replaceAll("TASK_UUID", obj_task.uuid);
