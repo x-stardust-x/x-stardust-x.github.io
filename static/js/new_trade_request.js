@@ -19,14 +19,14 @@ doneBtn.addEventListener("click", function () {
     }
   }
   obj_sed.hhhhhhh = checkArray;
-  if (document.getElementById("otherCheck") != null ) { //&& document.getElementById("otherCheck").checked
-    checkArray.push("其他"); 
+  if (document.getElementById("otherCheck") != null) { //&& document.getElementById("otherCheck").checked
+    checkArray.push("其他");
     obj_sed.others = document.getElementById("textArea").value;
   }
   var cover = getLocalStorage("task_cover"); // `${TASK_COVER}`;
   var balance = getLocalStorage("balance");
   //parseFloat(balance) >= parseFloat(token)
-   if (1) {
+  if (1) {
     form.append("email", email);
     form.append("name", name);
     form.append("token", token);
@@ -36,9 +36,8 @@ doneBtn.addEventListener("click", function () {
     form.append("overview", overview);
     form.append("cover", cover);
     form.append("balance", balance);
-    //https://isu-backend.townway.com.tw/trade_request/create_request
     let settings = {
-      "url": `http://127.0.0.1:8000/create_request`,
+      "url": `${HOST_URL_ISU_BACKEND}/create_request`,
       "method": "POST",
       "timeout": 0,
       "processData": false,
@@ -51,11 +50,11 @@ doneBtn.addEventListener("click", function () {
       console.log(res);
       window.location.replace("/trade.html");
     });
-   }
-   else {
-     console.log("餘額不夠");
-     window.alert("很抱歉，您的時間餘額不夠導致交易無法送出")
-   }
+  }
+  else {
+    console.log("餘額不夠");
+    window.alert("很抱歉，您的時間餘額不夠導致交易無法送出")
+  }
 });
 
 

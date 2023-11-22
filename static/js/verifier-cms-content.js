@@ -16,7 +16,7 @@ function delete_task() {
   form.append("uuid", uuid);
 
   var settings = {
-    "url": "https://beta-tplanet-backend.townway.com.tw/tasks/del_task",
+    "url": `${HOST_URL_TPLANET_DAEMON}/tasks/del_task`,
     "method": "POST",
     "timeout": 0,
     "processData": false,

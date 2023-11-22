@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // });
     //var path = window.location.pathname;
      var form = new FormData();
-     var email = "400@gmail.com";
+     var email = "yillkid@gmail.com";
      var type = "1";
      var name = document.getElementById("taskName").value; 
      var overview = document.getElementById("taskContent").value;

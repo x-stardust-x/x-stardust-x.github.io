@@ -130,7 +130,7 @@ function get_task_objects() {
   form.append("email", getLocalStorage('email'));
   var dataJason = {};
   let settings = {
-      url: `https://isu-backend.townway.com.tw/get_data`,
+      url: `${HOST_URL_ISU_BACKEND}/get_data`,
       method: "POST",
       timeout: 0,
       processData: false,
@@ -160,7 +160,7 @@ function get_point(){
   
     
     let settings = {
-      url: `https://isu-backend.townway.com.tw/get_trust_point`,
+      url: `${HOST_URL_ISU_BACKEND}/get_trust_point`,
       method: "POST",
       timeout: 0,
       processData: false,
