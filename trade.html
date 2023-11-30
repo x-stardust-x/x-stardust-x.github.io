@@ -23,6 +23,7 @@
   <script src="/static/js/getGroup.js"></script>
   <title>交易所</title>
 </head>
+
 <body onload="init();">
   <div class="container px-0 border border-3 border-bottom-0 border-black">
     <nav class="navbar bg-dark bg-gradient" data-bs-theme="dark">
@@ -66,14 +67,36 @@
     </div>
     <div class="row border border-3 border-top-0 border-black" id="trade"
       style="background-color: rgba(126, 68, 2, 0.562); height: 650px; overflow-y: scroll;">
-      <div
-        class="col-12 col-md-4 bg-danger d-flex justify-content-center align-items-center border border-2 border-dark">
-        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">打掃</a>
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center border border-2 border-dark"
+        style="background-image: linear-gradient(to top,rgb(0, 188, 179),rgb(98, 255, 0));">
+        <a class=" link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
+          onclick="get_type(event)">環境清理</a>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-success fs-1">任務二</div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-info fs-1">任務三</div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-warning fs-1">任務四</div>
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
+        style="background-image: linear-gradient(to top,rgb(86, 184, 0),rgb(242, 255, 3));">
+        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
+          onclick="get_type(event)">照顧寵物</a>
+      </div>
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
+        style="background-image: linear-gradient(to top,rgb(255, 53, 194),rgb(227, 125, 255));">
+        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
+          onclick="get_type(event)">照護</a>
+      </div>
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
+        style="background-image: linear-gradient(to top,rgb(255, 122, 40),rgb(250, 181, 96));">
+        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
+          onclick="get_type(event)">課業輔導</a>
+      </div>
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
+        style="background-image: linear-gradient(to top,rgb(64, 127, 253),rgb(3, 255, 179));">
+        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
+          onclick="get_type(event)">行政支援</a>
+      </div>
+      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
+        style="background-image: linear-gradient(to top,rgb(255, 79, 79),rgb(255, 120, 185))  ;">
+        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
+          onclick="get_type(event)">其他</a>
+      </div>
     </div>
     <div class="row d-flex justify-content-center border border-3 border-top-0 border-black">
       <a href="choice.html"

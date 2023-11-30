@@ -255,5 +255,8 @@ function setPageInfo() {
     } else if (page == "trade.html") {
       setLocalStorage("balance", get_balance());
       document.getElementById("balance").innerHTML = getLocalStorage("balance");
+    } else if (page == "trade-request.html"){
+      var urlParams = new URLSearchParams(window.location.search);
+      document.getElementById("task_name").value = urlParams.get("text");
     }
 }
