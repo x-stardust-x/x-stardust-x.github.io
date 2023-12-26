@@ -16,8 +16,6 @@
   <script src="/static/js/localStorage.js"></script>
   <script src="/static/js/auth.js"></script>
   <script src="/static/js/navbar.js"></script>
-  <script src="/static/js/profile.js"></script>
-  <script src="/static/js/token.js"></script>
   <script src="/static/js/set-page-info.js"></script>
   <script src="/static/js/init.js"></script>
   <script src="/static/js/getGroup.js"></script>
@@ -57,108 +55,93 @@
   <div class="container px-3 border border-3 border-top-0 border-black" style="background: rgba(157, 245, 182, 0.562);">
     <div class="row">
       <div class="col-0 col-md-1 p-0 m-0 d-none d-md-block">
-        <a class="Sign_Bar h-100 d-flex justify-content-center align-items-center link-dark link-underline link-underline-opacity-0"
-          href="#" onclick="logout()">
+        <a class="Sign_Bar" href="#" onclick="logout()">
           <p class="fs-1 m-0 p-3">登出</p>
         </a>
       </div>
       <div class="col-12 col-md-11 py-4">
         <div class="row row-gap-5 d-flex justify-content-evenly">
-          <div class="col-10 col-md-5">
-            <div class="row border border-3 border-bottom-0 rounded-top-5 border-black" style="background: #D08A00;">
-              <h1 class="text-center my-1">身分資訊</h1>
+          <div class="col-10 col-md-5 box">
+            <div class="row box-header">
+              <h1>身分資訊</h1>
             </div>
-            <div class="row p-1 border border-3 border-top-0 border-bottom-0 border-black" style="background: #C4C4C4;">
+            <div class="row p-1 box-content">
               <div class="col-8">
                 <p class="fs-5">此介面是用來顯示個人的身分資料和編輯個人的暱稱和頭像</p>
               </div>
-              <div class="col-4 p-1">
-                <img src="static/imgs/face_smile_man2.jpg" class="w-100 border border-2 border-black rounded-circle">
+              <div class="col-4 p-1 d-flex align-items-center">
+                <img src="static/imgs/face_smile_man2.jpg">
               </div>
             </div>
-            <a class="link-dark link-underline link-underline-opacity-0 " href="eid.html">
-              <div class="row border border-3 border-top-0 rounded-bottom-5 border-black c_red">
-                <h3 class="text-center my-1">點此進入</h3>
-              </div>
+            <a class="row box-footer" href="eid.html">
+              <h3>點此進入</h3>
             </a>
           </div>
-          <div class="col-10 col-md-5">
-            <div class="row border border-3 border-bottom-0 rounded-top-5 border-black" style="background: #D08A00;">
-              <h1 class="text-center my-1">領取任務</h1>
+          <div class="col-10 col-md-5 box">
+            <div class="row box-header">
+              <h1>領取任務</h1>
             </div>
-            <div class="row p-1 border border-3 border-top-0 border-bottom-0 border-black" style="background: #C4C4C4">
+            <div class="row p-1 box-content">
               <div class="col-8">
                 <p class="fs-5">現在透過QRcode來領取任務或系統根據個人的專長找出適合的任務</p>
               </div>
-              <div class="col-4 p-1">
-                <img src="static/imgs/todo_people.jpg" class="w-100 border border-2 border-black rounded-circle">
+              <div class="col-4 p-1 d-flex align-items-center">
+                <img src="static/imgs/todo_people.jpg">
               </div>
             </div>
-            <a class="link-dark link-underline link-underline-opacity-0 " href="wallet.html">
-              <div class="row border border-3 border-top-0 rounded-bottom-5 border-black c_red">
-                <h3 class="text-center my-1">點此進入</h3>
-              </div>
+            <a class="row box-footer" href="wallet.html">
+              <h3>點此進入</h3>
             </a>
           </div>
-          <div class="col-10 col-md-5">
-            <div class="row border border-3 border-bottom-0 rounded-top-5 border-black" style="background: #D08A00;">
-              <h1 class="text-center my-1">交易所</h1>
+          <div class="col-10 col-md-5 box">
+            <div class="row box-header">
+              <h1>交易所</h1>
             </div>
-            <div class="row p-1 border border-3 border-top-0 border-bottom-0 border-black" style="background: #C4C4C4">
+            <div class="row p-1 box-content">
               <div class="col-8">
                 <p class="fs-5">可透過個人的完成任務時間來等價交換服務</p>
               </div>
-              <div class="col-4 p-1">
-                <img src="static/imgs/money_bag_dollar.jpg"
-                  class="bg-cover w-100 border border-2 border-black rounded-circle">
+              <div class="col-4 p-1 d-flex align-items-center">
+                <img src="static/imgs/money_bag_dollar.jpg">
               </div>
             </div>
-            <a class="link-dark link-underline link-underline-opacity-0 " href="trade.html">
-              <div class="row border border-3 border-top-0 rounded-bottom-5 border-black c_red">
-                <h3 class="text-center my-1">點此進入</h3>
-              </div>
+            <a class="row box-footer" href="trade.html">
+              <h3>點此進入</h3>
             </a>
           </div>
-          <div class="col-10 col-md-5">
-            <div class="row  border border-3 border-bottom-0 rounded-top-5 border-black" style="background: #D08A00;">
-              <h1 class="text-center my-1">歷史紀錄</h1>
+          <div class="col-10 col-md-5 box">
+            <div class="row box-header">
+              <h1>歷史紀錄</h1>
             </div>
-            <div class="row p-1 border border-3 border-top-0 border-bottom-0 border-black" style="background: #C4C4C4">
+            <div class="row p-1 box-content">
               <div class="col-8">
                 <p class="fs-5">可以看到之前接取的任務詳細和交易所的使用紀錄</p>
               </div>
-              <div class="col-4 p-1">
-                <img src="static/imgs/book_tosyokan_label.png"
-                  class="w-100 border border-2 border-black rounded-circle">
+              <div class="col-4 p-1 d-flex align-items-center">
+                <img src="static/imgs/book_tosyokan_label.png">
               </div>
             </div>
-            <a class="link-dark link-underline link-underline-opacity-0 " href="verified-tasks.html">
-              <div class="row border border-3 border-top-0 rounded-bottom-5 border-black c_red">
-                <h3 class="text-center my-1">點此進入</h3>
-              </div>
+            <a class="row box-footer" href="verified-tasks.html">
+              <h3>點此進入</h3>
             </a>
           </div>
-          <div class="col-10 col-md-5">
-            <div class="row border border-3 border-bottom-0 rounded-top-5 border-black" style="background: #D08A00;">
-              <h1 class="text-center my-1">永續合作</h1>
+          <div class="col-10 col-md-5 box">
+            <div class="row box-header">
+              <h1>永續合作</h1>
             </div>
-            <div class="row p-1 border border-3 border-top-0 border-bottom-0 border-black" style="background: #C4C4C4">
+            <div class="row p-1 box-content">
               <div class="col-8">
                 <p class="fs-5">看目前已接受的任務並且完成任務</p>
               </div>
-              <div class="col-4 p-1">
-                <img src="static/imgs/leader_business_man.jpg"
-                  class="w-100 border border-2 border-black rounded-circle">
+              <div class="col-4 p-1 d-flex align-items-center">
+                <img src="static/imgs/leader_business_man.jpg">
               </div>
             </div>
-            <a class="link-dark link-underline link-underline-opacity-0" href="issues.html">
-              <div class="row border border-3 border-top-0 rounded-bottom-5 border-black c_red">
-                <h3 class="text-center my-1">點此進入</h3>
-              </div>
+            <a class="row box-footer" href="issues.html">
+              <h3>點此進入</h3>
             </a>
           </div>
-          <div class="col-10 col-md-5">
-            
+          <div class="col-10 col-md-5 box invisible">
           </div>
         </div>
       </div>

@@ -57,8 +57,9 @@
   <div class="container" style="background:rgba(157, 245, 182, 0.562);">
     <div class="row border border-3 border-black">
       <div class="col d-flex justify-content-end">
-        <p class="my-1 fs-3 me-5"><i class="bi bi-card-checklist me-2"></i>可交易任務剰<span class="fs-3" id="number_of_task">0</span>個</p>
-        <p class="my-1 fs-3"><i class="bi bi-clock me-2"></i>時間餘額<span class="fs-3" id="balance">0</span>小時</p>
+        <p class="my-1 fs-3 me-5"><i class="bi bi-card-checklist me-2"></i>可交易任務：<span class="fs-3"
+            id="number_of_task">0</span>個</p>
+        <p class="my-1 fs-3"><i class="bi bi-clock me-2"></i>時間餘額：<span class="fs-3" id="balance">0</span>小時</p>
       </div>
     </div>
     <div class="row border border-3 border-top-0 border-black">
@@ -66,42 +67,29 @@
         <h2 class="my-1"><i class="bi bi-currency-exchange me-2"></i>可兌換服務項目</h2>
       </div>
     </div>
-    <div class="row border border-3 border-top-0 border-black" id="trade" style="background-color: rgba(126, 68, 2, 0.562); height: 650px; overflow-y: scroll;">
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center border border-2 border-dark"
-        style="background-image: linear-gradient(to top,rgb(0, 188, 179),rgb(98, 255, 0));">
-        <a class=" link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">環境清理</a>
+    <div class="row trade_box">
+      <div class="col-12 col-md-4 trade_items" style="--clr:rgba(84, 220, 0);">
+        <a class="btn fs-1" href="trade-request.html" onclick="get_type(event)">環境清理</a>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
-        style="background-image: linear-gradient(to top,rgb(86, 184, 0),rgb(242, 255, 3));">
-        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">照顧寵物</a>
+      <div class="col-12 col-md-4 trade_items" style="--clr:rgba(246,255,0);">
+        <a class="btn fs-1" href="trade-request.html" onclick="get_type(event)">照顧寵物</a>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
-        style="background-image: linear-gradient(to top,rgb(255, 53, 194),rgb(227, 125, 255));">
-        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">照護</a>
+      <div class="col-12 col-md-4 trade_items" style="--clr:rgba(243,117,255);">
+        <a class="btn fs-1" href="trade-request.html" onclick="get_type(event)">照護</a>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
-        style="background-image: linear-gradient(to top,rgb(255, 122, 40),rgb(250, 181, 96));">
-        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">課業輔導</a>
+      <div class="col-12 col-md-4 trade_items" style="--clr:rgba(0,204,219);">
+        <a class="btn fs-1" href="trade-request.html" onclick="get_type(event)">課業輔導</a>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
-        style="background-image: linear-gradient(to top,rgb(64, 127, 253),rgb(3, 255, 179));">
-        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">行政支援</a>
+      <div class="col-12 col-md-4 trade_items" style="--clr:rgba(255,145,0);">
+        <a class="btn fs-1" href="trade-request.html" onclick="get_type(event)">行政支援</a>
       </div>
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center fs-1 border border-2 border-dark"
-        style="background-image: linear-gradient(to top,rgb(255, 79, 79),rgb(255, 120, 185))  ;">
-        <a class="link-underline link-underline-opacity-0 text-dark fs-1" href="trade-request.html"
-          onclick="get_type(event)">其他</a>
+      <div class="col-12 col-md-4 trade_items" style="--clr:rgba(255,103,103);">
+        <a class="btn fs-1" href="trade-request.html" onclick="get_type(event)">其他</a>
       </div>
     </div>
     <div class="row d-flex justify-content-center border border-3 border-top-0 border-black">
-      <a href="choice.html"
-        class="col-3 col-md-2 m-2 border border-3 border-black rounded-5 link-underline link-underline-opacity-0 btn btn-primary">
-        <p class="fs-3 text-center my-auto text-light">返回</p>
+      <a href="choice.html" class="col-3 col-md-2 Back">
+        <h3>返回</h3>
       </a>
     </div>
   </div>
