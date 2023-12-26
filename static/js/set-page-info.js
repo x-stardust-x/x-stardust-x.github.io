@@ -7,7 +7,7 @@ function setInfoEid() {
   dataJSON.email = getLocalStorage("email");
   dataJSON.ec = 0;
   $.ajax({
-    url: HOST_URL_EID_DAEMON + "/accounts/balance",
+    url: HOST_URL_ISU_BACKEND + "/get_balance",
     type: "POST",
     async: false,
     crossDomain: true,

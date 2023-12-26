@@ -33,12 +33,8 @@ const modal_task = `
     </div>
 </div>
 `
-
-
 const user_point = get_point();
 const user_des = get_des().description.hhhhhhh;
-// console.log(user_point);
-// console.log(user_des);
 
 function set_task_list(list_tasks) {
     let mission = document.getElementById("mission_list");
@@ -78,7 +74,6 @@ function set_task_list(list_tasks) {
 
         var obj_task_block = document.createElement("div");
         var modal_block = document.createElement("div");
-        // obj_task_block.setAttribute("id", "mission" + index);
         if (compare_point(task_point) && compare_des(task_des)) {
             if (people_now < people_max) {
                 number++;
@@ -103,7 +98,6 @@ function des_list(task_des) {
 }
 
 function compare_point(task_point) {
-    // console.log(task_point);
     if (user_point >= task_point) {
         return 1;
     }
@@ -113,11 +107,9 @@ function compare_point(task_point) {
 function compare_des(task_des) {
     task_des = JSON.parse(task_des);
     task_des = task_des.hhhhhhh;
-    // console.log(task_des.hhhhhhh);
     for (let i = 0; i < user_des.length; i++) {
         for (let j = 0; j < task_des.length; j++) {
             if (user_des[i] == task_des[j] && task_des[j] != "其他") {
-                // console.log(user_des[i]);
                 return 1;
             }
         }
@@ -129,7 +121,8 @@ function task_save(uuid) {
     var dataJSON = {};
     dataJSON.email = getLocalStorage("email");
     dataJSON.uuid = uuid;
-
+    pass_flag_eid = 0;
+    pass_flag_tplanet = 0;
     $.ajax({
         url: HOST_URL_EID_DAEMON + "/tasks/save",
         type: "POST",
@@ -138,10 +131,30 @@ function task_save(uuid) {
         data: dataJSON,
         success: function (returnData) {
             console.log(returnData);
-            window.location.replace("/issues.html");
+            pass_flag_eid = 1;
         },
         error: function (xhr, ajaxOptions, thrownError) {
             console.log(thrownError);
+            alert("你已經接過此任務了!!!\n請重新選擇任務");
         }
     });
+    if (pass_flag_eid) {
+        $.ajax({
+            url: HOST_URL_TPLANET_DAEMON + "/tasks/add_nowpeople",
+            type: "POST",
+            async: false,
+            crossDomain: true,
+            data: dataJSON,
+            success: function (returnData) {
+                console.log(returnData);
+                pass_flag_tplanet = 1;
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(thrownError);
+            }
+        });
+    }
+    if (pass_flag_eid && pass_flag_tplanet) {
+        window.location.replace("/issues.html");
+    }
 }

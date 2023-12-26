@@ -43,6 +43,21 @@
             console.log(thrownError);
           }
         });
+        $.ajax({
+          //HOST_URL_ISU_BACKEND
+          url: HOST_URL_ISU_BACKEND + "/add_balance",
+          type: "POST",
+          async: false,
+          crossDomain: true,
+          data: dataJSON,
+          success: function (returnData) {
+            console.log(returnData);
+            const obj = JSON.parse(returnData);
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            console.log(thrownError);
+          }
+        });
       });
     });
   </script>

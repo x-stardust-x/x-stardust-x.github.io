@@ -219,6 +219,8 @@ function finish_task() {
 
   // show task summary
   document.getElementById("task_summary").style.visibility = "visible";
+  issue_executor_uuid = getLocalStorage("target");
+  window.location.replace('verifier-cms-content.html?task=' + issue_executor_uuid);
 }
 
 function list_tasks(email) {
@@ -512,7 +514,7 @@ function addVerifiedTable(list_uuid) {
 
     // finish_date
     var newCell_task_name = newRow.insertCell();
-    var newText_task_name = document.createTextNode(obj_history.finish_date);
+    var newText_task_name = document.createTextNode(obj_history.finish_date + " (UTC)");
     newCell_task_name.className = "text-center";
     newCell_task_name.appendChild(newText_task_name);
 
