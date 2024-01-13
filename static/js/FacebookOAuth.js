@@ -3,7 +3,7 @@ function eIDFacebookLogin(input_token, res) {
 
   // Oauth to eID
   var dataJSON = {};
-  dataJSON.email = res.email 
+  dataJSON.email = res.email
   dataJSON.username = res.username
   dataJSON.token = input_token
   $.ajax({
@@ -11,16 +11,16 @@ function eIDFacebookLogin(input_token, res) {
     type: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
-       const obj = JSON.parse(returnData);
-       // Set LocalStorage
-       setLocalStorage("jwt", obj.token);
-       setLocalStorage("username", obj.username);
+    data: dataJSON,
+    success: function (returnData) {
+      const obj = JSON.parse(returnData);
+      // Set LocalStorage
+      setLocalStorage("jwt", obj.token);
+      setLocalStorage("username", obj.username);
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });
-   window.location.replace("/choice.html");
+  window.location.replace("/choice.html");
 }

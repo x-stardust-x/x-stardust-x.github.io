@@ -33,20 +33,15 @@
             const mission = document.getElementById('mission_list');
             const btn1 = document.getElementById('btn1');
             const btn2 = document.getElementById('btn2');
-            const text = "d-flex justify-content-end";
             const header_text = document.getElementById('header_text');
+            camera.classList.toggle("d-none");
+            mission.classList.toggle("d-none");
+            btn1.classList.toggle("d-none");
+            btn2.classList.toggle("d-none");
             if (oc) {
-                camera.setAttribute("class", "row d-flex justify-content-center py-3 border border-3 border-top-0 border-black" + " d-none")
-                mission.setAttribute("class", "row row-cols-1 row-cols-md-4 py-3 border border-3 border-top-0 border-black")
-                btn1.setAttribute("class", text + ' d-none');
-                btn2.setAttribute("class", text);
                 header_text.innerHTML = '只顯示適合你的任務 <i class="bi bi-question-circle-fill" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor:pointer;"></i>';
             }
             else {
-                camera.setAttribute("class", "row d-flex justify-content-center py-3 border border-3 border-top-0 border-black")
-                mission.setAttribute("class", "row row-cols-1 row-cols-md-4 py-3 border border-3 border-top-0 border-black" + " d-none")
-                btn1.setAttribute("class", text);
-                btn2.setAttribute("class", text + " d-none");
                 header_text.innerText = "透過掃描來領取任務";
             }
         }

@@ -1,6 +1,6 @@
 // Get balance
 
-function get_balance(){
+function get_balance() {
   var dataJSON = {};
   var resultJSON = {};
   dataJSON.email = getLocalStorage("email");
@@ -10,12 +10,12 @@ function get_balance(){
     type: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
+    data: dataJSON,
+    success: function (returnData) {
       const obj = JSON.parse(returnData);
       resultJSON = obj;
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });

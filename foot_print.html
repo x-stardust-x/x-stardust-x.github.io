@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
-  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link href="static/css/style.css" rel="stylesheet" type="text/css">
   <script src="static/js/config.js"></script>
   <script src="static/js/localStorage.js"></script>
@@ -29,30 +33,34 @@
     <div class="row">
       <div class="col">
         <!-- <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-center px-0"> -->
-		  
-          <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-start align-items-sm-center px-0">
-            <a class="navbar-brand mr-sm-3" href="index.html"><img class="mr-1 logo-isu" src="/static/imgs/eID-logo.png"> <img class="logo-isu" src="/static/imgs/ISU%20logo-s.png"></a> <a aria-expanded="false" class="navbar-brand mr-0 ml-auto d-sm-none" data-toggle="dropdown" href="#" role="button"><img src="/static/imgs/user-edit-solid.svg" style="width: 45px"></a>
-            <ul class="nav nav-tabs w-100 mr-sm-3 mt-3 mt-sm-0">
-              <li class="nav-item">
-                <a class="nav-link px-2 px-sm-3" href="/eid.html">身分證</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 px-sm-3" href="/issues.html">永續合作</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 active px-sm-3" href="/foot_print.html">數位足跡</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-2 px-sm-3" href="/wallet.html">領取任務</a>
-              </li>
-            </ul>
-            <a aria-expanded="false" class="navbar-brand mr-0 ml-auto d-none d-sm-block" data-toggle="dropdown" href="#" role="button"><img src="/static/imgs/user-edit-solid.svg" style="width: 45px"></a>
-            <div class="dropdown-menu dropdown-menu-right" id="dropdown">
-            </div>
-          </nav>
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-start align-items-sm-center px-0">
+          <a class="navbar-brand mr-sm-3" href="index.html"><img class="mr-1 logo-isu" src="/static/imgs/eID-logo.png">
+            <img class="logo-isu" src="/static/imgs/ISU%20logo-s.png"></a> <a aria-expanded="false"
+            class="navbar-brand mr-0 ml-auto d-sm-none" data-toggle="dropdown" href="#" role="button"><img
+              src="/static/imgs/user-edit-solid.svg" style="width: 45px"></a>
+          <ul class="nav nav-tabs w-100 mr-sm-3 mt-3 mt-sm-0">
+            <li class="nav-item">
+              <a class="nav-link px-2 px-sm-3" href="/eid.html">身分證</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 px-sm-3" href="/issues.html">永續合作</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 active px-sm-3" href="/foot_print.html">數位足跡</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-2 px-sm-3" href="/wallet.html">領取任務</a>
+            </li>
+          </ul>
+          <a aria-expanded="false" class="navbar-brand mr-0 ml-auto d-none d-sm-block" data-toggle="dropdown" href="#"
+            role="button"><img src="/static/imgs/user-edit-solid.svg" style="width: 45px"></a>
+          <div class="dropdown-menu dropdown-menu-right" id="dropdown">
+          </div>
+        </nav>
 
         <!-- <div class="container"> -->
-          <div class="container-fluid min-vh-100"> <!-- border border-secondary border-width-lg -->
+        <div class="container-fluid min-vh-100"> <!-- border border-secondary border-width-lg -->
           <div class="row justify-content-center mt-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
               <div class="border p-2" style="height: 300px; overflow-y: scroll;">
@@ -80,9 +88,10 @@
     </div>
   </div>
   <script src="https://d3js.org/d3.v4.min.js">
-  </script> 
+  </script>
   <script>
-  updateNodeData();
+    updateNodeData();
   </script>
 </body>
+
 </html>

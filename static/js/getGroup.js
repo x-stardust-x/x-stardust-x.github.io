@@ -18,7 +18,7 @@ $.ajax(settings).done(async function (res) {
   await getGroup(obj)
 });
 
-function getGroup(data){
+function getGroup(data) {
   const Dropdown = document.getElementById('dropdown');
   /* if(data.group === '300'){
     Dropdown.innerHTML = dropdown();
@@ -35,9 +35,9 @@ function getGroup(data){
     </a>
     `
   } */
-  
-  if(data.group === '202'){
-    Dropdown.innerHTML=`
+
+  if (data.group === '202') {
+    Dropdown.innerHTML = `
     ${dropdown()}
     <li class="col order-1"><a class="dropdown-item text-light" href="verifier-cms-list.html"><i
 				class="bi bi-ticket me-1"></i>發布任務</a></li>
@@ -57,7 +57,7 @@ function getGroup(data){
   }
 }
 
-function dropdown () {
+function dropdown() {
   return `
       <li class="col order-first"><a class="dropdown-item text-light" href="choice.html"><i
             class="bi bi-house me-1"></i>選擇介面</a></li>
@@ -100,12 +100,12 @@ function get_account_group() {
     type: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
+    data: dataJSON,
+    success: function (returnData) {
       const obj = JSON.parse(returnData);
       resultJSON = obj;
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });
@@ -123,12 +123,12 @@ function set_account_group(group) {
     type: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
+    data: dataJSON,
+    success: function (returnData) {
       const obj = JSON.parse(returnData);
       resultJSON = obj;
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });

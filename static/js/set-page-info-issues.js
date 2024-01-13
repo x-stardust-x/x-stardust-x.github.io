@@ -12,7 +12,7 @@ const str_issue_block = `<div class="card">
 function set_page_info_issues() {
   var list_task_UUIDs = list_tasks(getLocalStorage("email"));
   var task_container = document.getElementById("issues-list");
-  
+
   for (var index = 0; index < list_task_UUIDs.length; index++) {
     var obj_task = get_task_info(list_task_UUIDs[index]);
     console.log(obj_task);

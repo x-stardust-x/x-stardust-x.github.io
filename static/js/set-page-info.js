@@ -61,26 +61,26 @@ function setPageInfo() {
       var list_des = document.getElementById("list_des");
       for (var index_skill = 0; index_skill < list_skills.length; index_skill++) {
         var cols = document.createElement("div");
-        cols.setAttribute("class","col-12 col-md-3 fs-4");
-        cols.append(index_skill+1 + '.' + list_skills[index_skill]);
-        if(list_skills[index_skill] != "其他"){
+        cols.setAttribute("class", "col-12 col-md-3 fs-4");
+        cols.append(index_skill + 1 + '.' + list_skills[index_skill]);
+        if (list_skills[index_skill] != "其他") {
           list_des.append(cols);
         }
-        else{
-          if(obj_des.description.others != ""){
+        else {
+          if (obj_des.description.others != "") {
             list_des.append(cols);
-            cols.setAttribute("class","col-12 col-md-3 fs-4");
-            
+            cols.setAttribute("class", "col-12 col-md-3 fs-4");
+
             let TA = document.createElement("textarea");
-            TA.setAttribute("class","form-control");
-            TA.setAttribute("rows",2);
-            if(obj_des.description.others == ""){
-              TA.setAttribute("style","display : none;");  
+            TA.setAttribute("class", "form-control");
+            TA.setAttribute("rows", 2);
+            if (obj_des.description.others == "") {
+              TA.setAttribute("style", "display : none;");
             }
-            else{
-              TA.setAttribute("style","display : block;");  
+            else {
+              TA.setAttribute("style", "display : block;");
             }
-            TA.setAttribute("readonly","");
+            TA.setAttribute("readonly", "");
             TA.append(obj_des.description.others);
             list_des.append(cols);
             list_des.append(TA);

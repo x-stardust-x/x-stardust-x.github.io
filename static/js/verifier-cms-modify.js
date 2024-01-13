@@ -1,4 +1,4 @@
-function set_page_info_verifier_cms_modify(){
+function set_page_info_verifier_cms_modify() {
   // Params
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -27,7 +27,7 @@ $.ajax(settings).done(async function (res) {
   await renderTask(obj);
 });
 
-function renderTask(taskData){
+function renderTask(taskData) {
 
   console.log(JSON.stringify(taskData));
   const cover = document.getElementById('cover');
@@ -42,7 +42,7 @@ function renderTask(taskData){
   document.getElementById('token').value = taskData.token;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const doneBtn = document.getElementById('doneBtn');
   doneBtn.addEventListener("click", function () {
     const queryString = window.location.search;
@@ -73,38 +73,38 @@ document.addEventListener('DOMContentLoaded', function() {
     //   console.log(response);
     // });
     //var path = window.location.pathname;
-     var form = new FormData();
-     var email = "yillkid@gmail.com";
-     var type = "1";
-     var name = document.getElementById("taskName").value; 
-     var overview = document.getElementById("taskContent").value;
-     var token = document.getElementById("token").value; 
-     var cover = getLocalStorage("task_cover");
-    
-     form.append("uuid", "00000001");  
-     form.append("task", uuid)
-     form.append("tasks", "[{\"sdg\":1, \"des\":\"123\"}, {\"sdg\":2, \"des\":\"456\"}, {\"sdg\":3, \"des\":\"789\"}]");
-     form.append("email", email);
-     form.append("token", token);
-     form.append("type", type);
-     form.append("name", name);
-     form.append("overview", overview);
-     form.append("cover", cover);
-     form.append("gps_flag", "true");
+    var form = new FormData();
+    var email = "yillkid@gmail.com";
+    var type = "1";
+    var name = document.getElementById("taskName").value;
+    var overview = document.getElementById("taskContent").value;
+    var token = document.getElementById("token").value;
+    var cover = getLocalStorage("task_cover");
 
-     var settings = { 
-       "url": `${HOST_URL_TPLANET_DAEMON}/tasks/new`,
-       "method": "POST",
-       "timeout": 0,
-       "processData": false,
-       "mimeType": "multipart/form-data",
-       "contentType": false,
-       "data": form
-     };
+    form.append("uuid", "00000001");
+    form.append("task", uuid)
+    form.append("tasks", "[{\"sdg\":1, \"des\":\"123\"}, {\"sdg\":2, \"des\":\"456\"}, {\"sdg\":3, \"des\":\"789\"}]");
+    form.append("email", email);
+    form.append("token", token);
+    form.append("type", type);
+    form.append("name", name);
+    form.append("overview", overview);
+    form.append("cover", cover);
+    form.append("gps_flag", "true");
 
-     $.ajax(settings).done(function (response) {
-       console.log(response);
-       window.location.replace('/verifier-cms-list.html');
-     });
+    var settings = {
+      "url": `${HOST_URL_TPLANET_DAEMON}/tasks/new`,
+      "method": "POST",
+      "timeout": 0,
+      "processData": false,
+      "mimeType": "multipart/form-data",
+      "contentType": false,
+      "data": form
+    };
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      window.location.replace('/verifier-cms-list.html');
+    });
   });
 });

@@ -7,11 +7,11 @@ function forgot_password(email) {
     type: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
+    data: dataJSON,
+    success: function (returnData) {
       resultJSON = JSON.parse(returnData);
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });
@@ -21,10 +21,10 @@ function forgot_password(email) {
 
 
 $(function () {
-  $("form").on("submit", function(e){
+  $("form").on("submit", function (e) {
     e.preventDefault();
 
-    var response =  forgot_password(document.getElementById("email").value);
+    var response = forgot_password(document.getElementById("email").value);
 
     if (response.result == true) {
       alert("新密碼已郵寄到您的信箱。")

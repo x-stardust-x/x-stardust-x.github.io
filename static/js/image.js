@@ -3,16 +3,16 @@
 // https://stackoverflow.com/questions/34116682/save-base64-image-python
 /*The FileModal Class*/
 function FileModal(accept) {
-  var callback = function() {};
+  var callback = function () { };
   return {
-    show: function() {
+    show: function () {
       $("<input>").attr({
         type: "file",
         accept: accept
-      }).appendTo("body").hide().change(function(e) {
+      }).appendTo("body").hide().change(function (e) {
         var file = e.target.files[0],
           reader = new FileReader();
-        reader.onload = function(progress) {
+        reader.onload = function (progress) {
           callback(progress.target.result);
         };
         reader.readAsDataURL(file);
@@ -26,10 +26,10 @@ function FileModal(accept) {
 
 function setImgToLS(ls_key) {
   var file = new FileModal("image/*");
-  file.onload = function(d) {
+  file.onload = function (d) {
     setLocalStorage("task_cover", d);
 
-    if ( null != document.getElementById(ls_key)) {
+    if (null != document.getElementById(ls_key)) {
       document.getElementById(ls_key).src = d;
     }
   };

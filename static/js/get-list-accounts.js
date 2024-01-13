@@ -9,11 +9,11 @@ function getBalance(mail) {
     type: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
+    data: dataJSON,
+    success: function (returnData) {
       result = returnData;
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });
@@ -31,11 +31,11 @@ function get_username(email) {
     method: "POST",
     async: false,
     crossDomain: true,
-    data:  dataJSON,
-    success: function(returnData) {
-       resultJSON = JSON.parse(returnData);
+    data: dataJSON,
+    success: function (returnData) {
+      resultJSON = JSON.parse(returnData);
     },
-    error: function(xhr, ajaxOptions, thrownError){
+    error: function (xhr, ajaxOptions, thrownError) {
       console.log(thrownError);
     }
   });
@@ -76,8 +76,8 @@ $.ajax(settings).done(function (accountRes) {
 
   $.ajax(settings2).done(function (skillRes) {
     const skillObj = JSON.parse(skillRes);
-    
-    
+
+
     renderTable(accountObj, skillObj);
   });
 });
@@ -98,8 +98,8 @@ function renderTable(accountData, skillData) {
   console.log("result", result);
   let tbodyContent = "";
   let tbody = document.getElementById("tbody");
-  result.forEach(function (item){
-    
+  result.forEach(function (item) {
+
     var onj_username = get_username(item.account);
 
     //let descriptionStr = item.description.replace(/\[|]/g,'');

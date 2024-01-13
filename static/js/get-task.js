@@ -18,7 +18,7 @@ $.ajax(settings).done(async function (res) {
   await renderTask(obj);
 });
 
-function renderTask(taskData){
+function renderTask(taskData) {
 
   console.log(JSON.stringify(taskData));
   const cover = document.getElementById('cover');
@@ -32,26 +32,26 @@ function renderTask(taskData){
   var list_des = document.getElementById("description_limit");
   for (var index_skill = 0; index_skill < list_skills.length; index_skill++) {
     var cols = document.createElement("div");
-    cols.setAttribute("class","col-12 fs-4");
-    cols.append(index_skill+1 + '.' + list_skills[index_skill]);
-    if(list_skills[index_skill] != "其他"){
+    cols.setAttribute("class", "col-12 fs-4");
+    cols.append(index_skill + 1 + '.' + list_skills[index_skill]);
+    if (list_skills[index_skill] != "其他") {
       list_des.append(cols);
     }
-    else{
-      if(JSON.parse(taskData.description_limit).others != ""){
+    else {
+      if (JSON.parse(taskData.description_limit).others != "") {
         list_des.append(cols);
-        cols.setAttribute("class","col-12 fs-4");
+        cols.setAttribute("class", "col-12 fs-4");
 
         let TA = document.createElement("textarea");
-        TA.setAttribute("class","form-control");
-        TA.setAttribute("rows",2);
-        if(JSON.parse(taskData.description_limit).others == ""){
-          TA.setAttribute("style","display : none;");  
+        TA.setAttribute("class", "form-control");
+        TA.setAttribute("rows", 2);
+        if (JSON.parse(taskData.description_limit).others == "") {
+          TA.setAttribute("style", "display : none;");
         }
-        else{
-          TA.setAttribute("style","display : block;");  
+        else {
+          TA.setAttribute("style", "display : block;");
         }
-        TA.setAttribute("readonly","");
+        TA.setAttribute("readonly", "");
         TA.append(JSON.parse(taskData.description_limit).others);
         list_des.append(cols);
         list_des.append(TA);
@@ -69,8 +69,8 @@ function renderTask(taskData){
   var obj_qrcode_task = document.createElement("qrcode_task");
 
   var qrcode_task = new QRCode(obj_qrcode_task, {
-    width : 250,
-    height : 250
+    width: 250,
+    height: 250
   });
 
   qrcode_task.style = "width:100px; height:100px; margin-top:15px;";
@@ -81,8 +81,8 @@ function renderTask(taskData){
   var obj_qrcode_verifier = document.createElement("qrcode_verifier");
 
   var qrcode_verifier = new QRCode(obj_qrcode_verifier, {
-    width : 250,
-    height : 250
+    width: 250,
+    height: 250
   });
 
   qrcode_verifier.style = "width:100px; height:100px; margin-top:15px;";

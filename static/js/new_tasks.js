@@ -22,12 +22,12 @@ doneBtn.addEventListener("click", function () {
     }
   }
   obj_sed.hhhhhhh = checkArray;
-  if (document.getElementById("otherCheck") != null ) { //&& document.getElementById("otherCheck").checked
-    checkArray.push("其他"); 
+  if (document.getElementById("otherCheck") != null) { //&& document.getElementById("otherCheck").checked
+    checkArray.push("其他");
     obj_sed.others = document.getElementById("textArea").value;
   }
 
-  
+
   form.append("uuid", uuid);
   form.append("email", email);
   form.append("type", type);
